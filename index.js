@@ -8,16 +8,12 @@ const space = document.getElementById("key_space");
 const ok = document.getElementById("key_ok");
 
 
-const change_keys_caps_lock = () =>{
-    virtual_keyboard_regular_keys.forEach(key =>{
-        // console.log(key) 
-        if(capslock.classList.contains("capslock")) {
-        console.log("Aa")
-        }
-    })
+const random_function = () =>{
+
+    console.log("Funkcija nek ima");    
 }
 
-
+random_function()
 textarea.addEventListener('blur', () => {
     setTimeout(() => {
         textarea.focus();
@@ -33,6 +29,11 @@ virtual_keyboard_regular_keys.forEach(key => {
         // textarea.value = textarea.value.slice(0, -1)
         let char = key.value;
         textarea.focus();
+        if(shift.classList.contains("active")){
+            virtual_keyboard_regular_keys.forEach(item =>{
+                item.classList.toggle("toUpperText")
+            })
+        }
     if ((shift.classList.contains('active') && !capslock.classList.contains('active')) || (!shift.classList.contains('active') && capslock.classList.contains('active'))) {
         textarea.value += char.toUpperCase(); 
         // textarea.value += char.toUpperCase() + "|"; kursor ? 
@@ -80,6 +81,7 @@ shift.addEventListener('click', () => {
     virtual_keyboard_regular_keys.forEach(key =>{
 
         key.classList.toggle("toUpperText")
+       
      })
 })
 
@@ -92,10 +94,7 @@ capslock.addEventListener('click', () => {
     })
    
 })
-backspace.addEventListener('click', () => {
-    textarea.focus();
-    textarea.value = textarea.value.slice(0, -1);
-})
+
 
 
 
@@ -110,3 +109,29 @@ document.getElementById("switch_theme").addEventListener("click",()=>{
     document.querySelector(".keyboard").classList.toggle("dark_theme_keyboard")
     document.querySelector(".main").classList.toggle("dark_theme_body")
 })
+
+ok.addEventListener("click", () => {
+    alert(`${textarea.value}`)
+    textarea.value = ""
+})
+
+let control_;
+let enter_;
+document.addEventListener('keydown', (e) => {
+    console.log(e.key);
+    if(e.key == "Control") {
+        control_ = true;
+    }
+    if(e.key == "Enter") {
+        enter_ = true;
+    }
+    if(control_ && enter_) {
+
+        console.log("Aaaa");
+        alert(`${textarea.value}`)
+        textarea.value = ""
+        control_ = false;
+        enter_ = false;
+    }
+ });
+ 
