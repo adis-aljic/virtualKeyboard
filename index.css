@@ -224,7 +224,7 @@ h2 {
 }
 
 .switch_theme label {
-    background-color: rgb(113, 138, 248);
+    background-color: rgb(94, 122, 248);
     border: 2px solid rgb(85, 85, 85);
     border-radius: 50px;
     cursor: pointer;
@@ -247,16 +247,22 @@ h2 {
     transition: all ease-in-out 0.3s;
     width: 3rem;
     height: 3rem;
+    box-shadow: 0px 7px 3px 1px rgba(0,0,0,0.85);
+-webkit-box-shadow: 1px 2px 3px 1px rgba(0,0,0,0.85);
+-moz-box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.85);
 }
 
 .switch_theme input[type=checkbox]:checked~label {
-    background-color: rgb(119, 119, 119);
-    border-color: rgb(20, 6, 99);
+    background-color: rgb(105, 104, 104);
+  
 }
 
 .switch_theme input[type=checkbox]:checked~label::after {
     transform: translateX(50px);
     background-color: rgb(54, 54, 54);
+    box-shadow: 0px 7px 13px 1px rgba(0,0,0,0.85);
+-webkit-box-shadow: 0px 7px 13px 1px rgba(0,0,0,0.85);
+-moz-box-shadow: 0px 7px 13px 1px rgba(0,0,0,0.85);
 
 }
 
