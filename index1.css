@@ -42,7 +42,8 @@
 .key_cl:hover,
 .key_e:hover,
 .key_s:hover {
-  background: linear-gradient(to bottom, #44584d 0%, #214630 26%, #022511 100%);
+    background-color: #323533;
+  /* background: linear-gradient(to bottom, #44584d 0%, #214630 26%, #022511 100%); */
 }
 
 .key:active,
