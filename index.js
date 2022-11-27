@@ -91,10 +91,10 @@ virtual_keyboard_regular_keys.forEach(key => {
 //     }
 // })
 
-space.addEventListener('click', () => {
-    textarea.focus();
-    textarea.value += ' ';
-})
+// space.addEventListener('click', () => {
+//     textarea.focus();
+//     textarea.value += ' ';
+// })
 
 enter.addEventListener('click', () => {
     // textarea.value = textarea.value.slice(0, -1)
