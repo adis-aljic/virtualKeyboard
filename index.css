@@ -18,6 +18,7 @@
 
 #key_backspace {
     grid-column: 11/13;
+    font-size: 0.8rem;
 }
 
 #key_capslock {
@@ -65,10 +66,11 @@
     align-items: center;
     color: white;
     background-color: rgb(29, 24, 24);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     box-shadow: -1px 1px 9px 6px rgba(0, 0, 0, 0.356);
     -webkit-box-shadow: -1px 1px 9px 6px rgba(0, 0, 0, 0.356);
     -moz-box-shadow: -1px 1px 9px 6px rgba(0, 0, 0, 0.356);
+    line-break: anywhere;
 }
 
 .key:active,
@@ -103,7 +105,49 @@ textarea {
     flex-direction: row;
 }
 
-@media only screen and (max-width: 900px) and (min-width: 450px) {
+
+@media only screen and (max-width:400px) {
+
+    
+    .key_bs,
+    .key_cl,
+    .key_e,
+    .key_s {
+        font-size: 0.6rem;
+        /* height: fit-content; */
+    }
+    /* .key{ */
+        /* width: fit-content; */
+    /* } */
+    .key_number, .sup_number{
+        /* width: 1rem; */
+        font-size: 0.5rem;
+    }
+    
+    .key_bs,
+    .key_cl,
+    .key_e,
+    .key_s {
+    line-break: anywhere;
+    /* font-weight: 300; */
+    /* width: max-content; */
+        /* width: 3rem; */
+    }
+
+    textarea {
+        width: 15rem;
+        height: 10rem;
+    }
+
+    .keyboard {
+        font-size: 1rem;
+        height: max-content;
+        gap: 1px;
+        width: 100%;
+    }
+
+}
+@media only screen and (min-width: 450px) and (max-width: 950px) {
 
     .key,
     .key_bs,
@@ -134,39 +178,8 @@ textarea {
 
 }
 
-@media only screen and (max-width :300px) {
 
-    .key,
-    .key_bs,
-    .key_cl,
-    .key_e,
-    .key_s {
-        font-size: 0.6rem;
-        line-break: anywhere;
-    }
-
-    .key_bs,
-    .key_cl,
-    .key_e,
-    .key_s {
-        font-weight: 300;
-    }
-
-    textarea {
-        width: 15rem;
-        height: 10rem;
-    }
-
-    .keyboard {
-        font-size: 1rem;
-        height: fit-content;
-        gap: 1px;
-        width: 100%;
-    }
-
-}
-
-@media only screen and (max-width: 450px) and (min-width: 300px) {
+@media only screen and (min-width: 300px) and (max-width: 450px)  {
 
 
     .key,
