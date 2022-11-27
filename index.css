@@ -73,8 +73,8 @@ textarea {
     font-size: 1.5rem;
     border: 2px solid rgb(206, 35, 197);
     background: rgb(240, 247, 254);
-    background: linear-gradient(90deg, rgba(240, 247, 254, 0.8) 10%, rgba(182, 175, 250, 0.7413340336134453),
-            rgba(0, 212, 255, 0.9) 80%, rgba(0, 212, 255, 0.99) 80%);
+    background: linear-gradient(90deg, rgba(240, 247, 254, 0.8) 30%, rgba(182, 175, 250, 0.7413340336134453),
+            rgba(0, 212, 255, 0.9) 60%, rgba(0, 212, 255, 0.99) 80%);
             border-radius: 8px;
 }
 
