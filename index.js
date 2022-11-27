@@ -30,6 +30,8 @@ virtual_keyboard_regular_keys.forEach(key => {
         // textarea.value = textarea.value.slice(0, -1)
         textarea.focus();
         let char = key.value;
+        document.querySelectorAll(".sup_number").forEach(item => item.classList.remove("sup_number_active"))
+        document.querySelectorAll(".key_number").forEach(item => item.classList.remove("key_number_active"))
         if (shift.classList.contains("active")) {
             switch (key.value) {
                 case "1": char = "!";
