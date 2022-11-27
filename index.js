@@ -44,7 +44,7 @@ virtual_keyboard_regular_keys.forEach(key => {
                     break;
                 case "5": char = "%";
                     break;
-                case "6": char = "^";
+                case "6": char = `"`;
                     break;
                 case "7": char = "&";
                     break;
@@ -53,6 +53,10 @@ virtual_keyboard_regular_keys.forEach(key => {
                 case "9": char = "(";
                     break;
                 case "0": char = ")";
+                    break;
+                case "_": char = "?";
+                    break;
+                case "-": char = ":";
                     break;
 
             }
