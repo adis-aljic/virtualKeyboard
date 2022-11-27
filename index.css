@@ -14,6 +14,7 @@
     grid-template-rows: repeat(5, 1fr);
     border: 1px solid black;
     gap: 0.25rem;
+    margin-bottom: 2rem;
 }
 
 #key_backspace {
@@ -59,6 +60,8 @@
 .key_cl,
 .key_e,
 .key_s {
+    transition: all 0.06s ease-out;
+    position: relative;
     border: 1px solid rgb(224, 208, 208);
     border-radius: 8px;
     display: flex;
@@ -79,7 +82,11 @@
 .key_e:active,
 .key_s:active {
     box-shadow: none;
+    /* box-shadow:inset -5px -4px 0 0 rgba(0,0,0,.2), */
+
 }
+
+
 
 
 
