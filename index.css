@@ -298,3 +298,6 @@ h2 {
 .switch_theme input[type=checkbox] {
     display: none;
 }
+.switch_theme p {
+    font-family: monospace;
+}
