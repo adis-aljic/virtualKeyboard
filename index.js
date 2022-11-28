@@ -133,8 +133,8 @@ dark_white_theme_switcher.addEventListener("click", () => {
 });
 
 
-google.addEventListener("click",()=>{
+google.addEventListener("click", () => {
     window.open("https://www.google.com", "_blank");
-    
+
 })
 
