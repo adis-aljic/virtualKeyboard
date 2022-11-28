@@ -5,7 +5,8 @@ const backspace = document.getElementById("key_backspace");
 const capslock = document.getElementById("key_capslock");
 const shift = document.getElementById("key_shift");
 const space = document.getElementById("key_space");
-const ok = document.getElementById("key_ok");
+const control = document.getElementById("key_control");
+const google = document.getElementById("key_google");
 const dark_white_theme_switcher = document.getElementById("switch_theme");
 
 
@@ -56,6 +57,18 @@ virtual_keyboard_regular_keys.forEach(key => {
                 case "_": char = "?";
                     break;
                 case "-": char = ":";
+                    break;
+                case "{": char = "}";
+                    break;
+                case "/": char = "\\";
+                    break;
+                case "+": char = "=";
+                    break;
+                case "[": char = "]";
+                    break;
+                case "<": char = ">";
+                    break;
+                case "`": char = "|";
                     break;
 
             };
@@ -110,38 +123,16 @@ capslock.addEventListener('click', () => {
 
 
 
-ok.addEventListener('click', () => {
-    alert(text.value);
-    shift.classList.toggle("active");
-    text.value = '';
-})
+
 
 dark_white_theme_switcher.addEventListener("click", () => {
     document.querySelector(".keyboard").classList.toggle("dark_theme_keyboard");
     document.querySelector(".main").classList.toggle("dark_theme_body");
 });
 
-ok.addEventListener("click", () => {
-    alert(`${textarea.value}`);
-    textarea.value = "";
-});
 
-let control_;
-let enter_;
-document.addEventListener("keydown", (e) => {
-    console.log(e.key);
-    if (e.key === "Control") {
-        control_ = true;
-    }
-    if (e.key === "Enter") {
-        enter_ = true;
-    }
-    if (control_ && enter_) {
-        alert(`${textarea.value}`)
-        textarea.value = ""
-        control_ = false;
-        enter_ = false;
-    }
-});
-
+google.addEventListener("click",()=>{
+    window.open("https://www.google.com", "_blank");
+    
+})
 
