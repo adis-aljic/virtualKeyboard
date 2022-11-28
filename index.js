@@ -128,6 +128,8 @@ capslock.addEventListener('click', () => {
 dark_white_theme_switcher.addEventListener("click", () => {
     document.querySelector(".keyboard").classList.toggle("dark_theme_keyboard");
     document.querySelector(".main").classList.toggle("dark_theme_body");
+    textarea.classList.toggle("dark_theme_area");
+
 });
 
 
