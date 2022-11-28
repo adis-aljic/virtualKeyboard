@@ -41,20 +41,22 @@
 #key_space {
     grid-column: 1/11;
 }
-.sup_number{
+
+.sup_number {
     margin-left: 5px;
     font-size: 1rem;
     color: rgb(182, 190, 228);
-    /* transform: scale(1.5); */
 }
+
 .sup_number_active {
-    /* background-color: yellow; */
-    /* color: black; */
+
     transform: scale(1.3);
 }
-.key_number_active{
+
+.key_number_active {
     transform: scale(0.5);
 }
+
 .key,
 .key_bs,
 .key_cl,
@@ -82,13 +84,9 @@
 .key_e:active,
 .key_s:active {
     box-shadow: none;
-    /* box-shadow:inset -5px -4px 0 0 rgba(0,0,0,.2), */
+    box-shadow: inset -5px -4px 0 0 rgba(0, 0, 0, .2),
 
 }
-
-
-
-
 
 textarea {
     width: 60rem;
@@ -96,10 +94,9 @@ textarea {
     border: 2px solid rgb(206, 35, 197);
     background: rgb(240, 247, 254);
     background: linear-gradient(90deg, rgba(240, 247, 254, 0.8) 30%, rgba(182, 175, 250, 0.7413340336134453),
-    rgba(0, 212, 255, 0.9) 60%, rgba(0, 212, 255, 0.99) 80%);
+            rgba(0, 212, 255, 0.9) 60%, rgba(0, 212, 255, 0.99) 80%);
     border-radius: 8px;
 }
-
 
 
 .hidden {
@@ -112,34 +109,53 @@ textarea {
     flex-direction: row;
 }
 
+@media only screen and (min-width: 200px) and (max-width: 300px) {
 
-@media only screen and (max-width:400px) {
+    .key,
+    .key_bs,
+    .key_cl,
+    .key_e,
+    .key_s {
+        font-size: smaller;
+    }
 
-    
+    .key_bs,
+    .key_cl,
+    .key_e,
+    .key_s {
+        font-weight: 100;
+    }
+
+    textarea {
+        width: 20rem;
+        height: auto;
+    }
+
+    .keyboard {
+        font-size: 1rem;
+        height: 10rem;
+        gap: 1px;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (min-width: 300px) and (max-width:400px) {
+
+
     .key_bs,
     .key_cl,
     .key_e,
     .key_s {
         font-size: 0.6rem;
-        /* height: fit-content; */
+        line-break: anywhere;
     }
-    /* .key{ */
-        /* width: fit-content; */
-    /* } */
-    .key_number, .sup_number{
-        /* width: 1rem; */
+
+    .key_number,
+    .sup_number {
         font-size: 0.5rem;
     }
-    
-    .key_bs,
-    .key_cl,
-    .key_e,
-    .key_s {
-    line-break: anywhere;
-    /* font-weight: 300; */
-    /* width: max-content; */
-        /* width: 3rem; */
-    }
+
 
     textarea {
         width: 15rem;
@@ -154,6 +170,39 @@ textarea {
     }
 
 }
+
+@media only screen and (min-width: 300px) and (max-width: 450px) {
+
+
+    .key,
+    .key_bs,
+    .key_cl,
+    .key_e,
+    .key_s {
+        font-size: smaller;
+    }
+
+    .key_bs,
+    .key_cl,
+    .key_e,
+    .key_s {
+        font-weight: 100;
+    }
+
+    textarea {
+        width: 20rem;
+        height: auto;
+    }
+
+    .keyboard {
+        font-size: 1rem;
+        height: 10rem;
+        gap: 1px;
+        width: 100%;
+    }
+
+}
+
 @media only screen and (min-width: 450px) and (max-width: 950px) {
 
     .key,
@@ -186,7 +235,8 @@ textarea {
 }
 
 
-@media only screen and (min-width: 300px) and (max-width: 450px)  {
+
+@media only screen and (min-width: 500px) and (max-width: 550px) {
 
 
     .key,
@@ -283,28 +333,83 @@ h2 {
     transition: all ease-in-out 0.3s;
     width: 3rem;
     height: 3rem;
-    box-shadow: 0px 7px 3px 1px rgba(0,0,0,0.85);
--webkit-box-shadow: 1px 2px 3px 1px rgba(0,0,0,0.85);
--moz-box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.85);
+    box-shadow: 0px 7px 3px 1px rgba(0, 0, 0, 0.85);
+    -webkit-box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.85);
+    -moz-box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.85);
 }
 
 .switch_theme input[type=checkbox]:checked~label {
     background-color: rgb(105, 104, 104);
-  
+
 }
 
 .switch_theme input[type=checkbox]:checked~label::after {
     transform: translateX(50px);
     background-color: rgb(54, 54, 54);
-    box-shadow: 0px 7px 13px 1px rgba(0,0,0,0.85);
--webkit-box-shadow: 0px 7px 13px 1px rgba(0,0,0,0.85);
--moz-box-shadow: 0px 7px 13px 1px rgba(0,0,0,0.85);
+    box-shadow: 0px 7px 13px 1px rgba(0, 0, 0, 0.85);
+    -webkit-box-shadow: 0px 7px 13px 1px rgba(0, 0, 0, 0.85);
+    -moz-box-shadow: 0px 7px 13px 1px rgba(0, 0, 0, 0.85);
 
 }
 
 .switch_theme input[type=checkbox] {
     display: none;
 }
+
 .switch_theme p {
     font-family: monospace;
+}
+
+.key:visited,
+.key_bs:visited,
+.key_cl:visited,
+.key_e:visited,
+.key_s:visited {
+    color: #5ea97d;
+}
+
+.key:hover,
+.key_bs:hover,
+.key_cl:hover,
+.key_e:hover,
+.key_s:hover {
+    background-color: #323533;
+}
+
+.key:active,
+.key_bs:active,
+.key_cl:active,
+.key_e:active,
+.key_s:active {
+    top: 6px;
+    text-shadow: 0 -2px 0 #7fbb98, 0 1px 1px #c2dece, 0 0 4px white;
+    color: white;
+}
+
+.key:active::before,
+.key_bs:active::before,
+.key_cl:active::before,
+.key_e:active::before,
+.key_s:active::before {
+    top: 0;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.7), 0 3px 9px rgba(0, 0, 0, 0.2);
+}
+
+.key:before,
+.key_bs:before,
+.key_cl:before,
+.key_e:before,
+.key_s:before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    top: 6px;
+    border-radius: 5px;
+    height: 25px;
+    background: linear-gradient(to top, #1e5033 0%, #378357 5px);
+    transition: all 0.08s ease-out;
+    box-shadow: 0 1px 0 2px rgba(0, 0, 0, 0.3), 0 5px 2.4px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.2);
 }

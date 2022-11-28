@@ -27,7 +27,6 @@ document.getElementById("show_keyboard").addEventListener("click", () => {
 
 virtual_keyboard_regular_keys.forEach(key => {
     key.addEventListener('click', () => {
-        // textarea.value = textarea.value.slice(0, -1)
         textarea.focus();
         let char = key.value;
         document.querySelectorAll(".sup_number").forEach(item => item.classList.remove("sup_number_active"))
@@ -69,7 +68,6 @@ virtual_keyboard_regular_keys.forEach(key => {
         }
         if ((shift.classList.contains('active') && !capslock.classList.contains('active')) || (!shift.classList.contains('active') && capslock.classList.contains('active'))) {
             textarea.value += char.toUpperCase();
-            // textarea.value += char.toUpperCase() + "|"; kursor ? 
             shift.classList.remove('active');
         } else {
             textarea.value += char;
@@ -78,29 +76,10 @@ virtual_keyboard_regular_keys.forEach(key => {
     })
 })
 
-// document.addEventListener("keydown",(e)=>{
-//     if(e.key === "Enter"){
-//         // virtual_keyboard_regular_keys.forEach(key =>{
-//             // if(key.clicked){
-
-//                 // textarea.value = textarea.value.slice(0, -1)
-//                 textarea.value += "\n"
-//             // }
-
-//         // })
-//     }
-// })
-
-// space.addEventListener('click', () => {
-//     textarea.focus();
-//     textarea.value += ' ';
-// })
 
 enter.addEventListener('click', () => {
-    // textarea.value = textarea.value.slice(0, -1)
     textarea.focus();
     textarea.value += '\n';
-    // textarea.value += '\n|';
 })
 
 backspace.addEventListener('click', () => {
